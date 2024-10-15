@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Services() {
   return (
     <div className="bg-[#030712] text-white mx-auto px-4 py-12 md:px-20">
@@ -12,10 +14,13 @@ export default function Services() {
       >
         {/* Row 1: Design */}
         <div className="relative group col-span-1">
-          <img
+          <Image
             src="/design.png"
             alt="Design"
             className="object-cover rounded-lg w-full h-auto"
+            layout="responsive" // Responsive layout
+            width={300} // Specify a width
+            height={200} // Specify a height
           />
           {/* Hover effect and vertical label */}
           <div className="absolute top-0 right-0 h-full bg-blue-600 text-white text-center px-2 flex justify-center items-center">
@@ -34,10 +39,13 @@ export default function Services() {
 
         {/* Row 1: Development */}
         <div className="relative group col-span-1 sm:col-span-2">
-          <img
+          <Image
             src="/development.png"
             alt="Development"
             className="object-cover rounded-lg w-full h-auto"
+            layout="responsive"
+            width={300}
+            height={200}
           />
           <div className="absolute top-0 right-0 h-full bg-blue-600 text-white text-center px-2 flex justify-center items-center">
             <span
@@ -55,10 +63,13 @@ export default function Services() {
 
         {/* Row 2: Zero to Hero */}
         <div className="relative group col-span-1 sm:col-span-2">
-          <img
+          <Image
             src="/zero_to_Hero.png"
             alt="Zero to Hero"
             className="object-cover rounded-lg w-full h-auto"
+            layout="responsive"
+            width={300}
+            height={200}
           />
           <div className="absolute top-0 right-0 h-full bg-blue-600 text-white text-center px-2 flex justify-center items-center">
             <span
@@ -76,10 +87,13 @@ export default function Services() {
 
         {/* Row 2: Enhance Specific Areas */}
         <div className="relative group col-span-1">
-          <img
+          <Image
             src="/enhanced.png"
             alt="Enhance Specific Areas"
             className="object-cover rounded-lg w-full h-auto"
+            layout="responsive"
+            width={300}
+            height={200}
           />
           <div className="absolute top-0 right-0 h-full bg-blue-600 text-white text-center px-2 flex justify-center items-center">
             <span

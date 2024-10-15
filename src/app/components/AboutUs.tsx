@@ -1,9 +1,8 @@
+import Image from 'next/image'; // Import Image from next/image for optimized images
+
 export default function AboutUs() {
   return (
     <section className="bg-[#030712] text-white py-16 px-4">
-
-      {/*  <section className="bg-gray-900 text-white py-16 px-4"> */}
-
       <div className="container mx-auto max-w-screen-xl px-4 md:px-20">
         {/* Section Title */}
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-12">
@@ -25,9 +24,11 @@ export default function AboutUs() {
 
           {/* Image */}
           <div className="md:w-1/3 flex justify-center">
-            <img
-              src="/aboutus.png"
+            <Image
+              src="/aboutus.png" // Ensure the path is correct
               alt="Our team at Code Vibe Studio working on a project"
+              width={500} // Specify width
+              height={300} // Specify height
               className="w-full h-auto rounded-lg object-cover"
               loading="lazy"
             />

@@ -5,11 +5,11 @@ import React from "react";
 export default function Page() {
     return (
         <div className="text-5xl text-white m-40">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-            <p>Hi, the about us  page will be here soon!</p>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>Hi, the service page will be here soon!</p>
         </div>
     );
 }

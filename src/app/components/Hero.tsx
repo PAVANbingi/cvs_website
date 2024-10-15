@@ -1,14 +1,18 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center bg-[#030712]">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${'hero_bg.jfif'})`,
-          filter: 'brightness(0.5)', // Adjust brightness for a subdued background
-        }}
-      ></div>
+      <div className="absolute inset-0">
+        <Image
+          src="/hero_bg.jfif" // Ensure the path to the background image is correct
+          alt="Hero Background"
+          layout="fill" // Fill the parent div
+          objectFit="cover" // Cover the entire div
+          style={{ filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
+        />
+      </div>
 
       {/* Hero Content */}
       <div className="text-center px-6 relative z-10">

@@ -1,76 +1,29 @@
-"use client"; // Ensure this is marked as a client component 
+import React from "react";
+import Image from "next/image"; // Importing Image from Next.js
 
-import { useState } from 'react'; // Import useState for managing mobile menu state
-
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle mobile menu visibility
-  };
-
+const Workflow: React.FC = () => {
   return (
-    <nav className="my-4 mx-4 bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 left-0 right-0 z-20 border-b border-gray-200 rounded-lg">
-      <div className="max-w-[1240px] mx-auto flex justify-between items-center h-[64px] px-6"> {/* Container */}
-        {/* Logo Section */}
-        <div className="flex items-center">
-          <img
-            src={'/cvs_logo.png'} // Update with your logo path
-            alt="Code Vibe Studios Logo"
-            className="h-16" // Adjusted height for better proportion
+    <div className="bg-[#030712] text-white py-12 px-4 md:px-20">
+      <div className="container mx-auto">
+        {/* Heading Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">How It Works</h2>
+        </div>
+
+        {/* Image Section */}
+        <div className="flex justify-center">
+          <Image
+            src="/workflow.png" // Update with the correct image path
+            alt="Workflow Illustration"
+            layout="responsive" // Ensures the image scales with the container
+            width={1241} // Set the image width
+            height={665} // Set the image height
+            className="max-w-full" // Ensures the image does not exceed the container width
           />
         </div>
-
-        {/* Links Section for Desktop */}
-        <div className={`hidden md:flex space-x-10`}>
-          <a href="#" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">
-            Home
-          </a>
-          <a href="#about" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">
-            About us
-          </a>
-          <a href="#services" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">
-            Services
-          </a>
-          <a href="#contactUs" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">
-            Contact us
-          </a>
-        </div>
-
-        {/* Button Section */}
-        <div>
-          <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-gray-800 px-6 py-2 rounded-full font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
-            Book a Call
-          </button>
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="bg-gradient-to-r from-purple-500 to-blue-600 text-gray-900 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 focus:outline-none rounded-full p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden flex flex-col space-y-2 p-4 bg-white bg-opacity-30 backdrop-blur-lg border border-gray-300 rounded-lg">
-          <a href="#" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Home</a>
-          <a href="#about" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">About us</a>
-          <a href="#services" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Services</a>
-          <a href="#contactUs" className="text-gray-900 hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Contact us</a>
-        </div>
-      )}
-    </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default Workflow;
