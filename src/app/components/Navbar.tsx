@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-10">
           <Link href="/" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Home</Link>
           <Link href="/about" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">About us</Link>
-          <Link href="/services" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Services</Link>
+          <Link href="/services_" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Services</Link>
           <Link href="/contactUs" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Contact us</Link>
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="md:hidden flex flex-col space-y-2 p-4 bg-white bg-opacity-30 backdrop-blur-lg border border-gray-300 rounded-lg">
           <Link href="/" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Home</Link>
           <Link href="/about" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">About us</Link>
-          <Link href="/services" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Services</Link>
+          <Link href="/services_" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Services</Link>
           <Link href="/contactUs" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">Contact us</Link>
         </div>
       )}
