@@ -12,9 +12,8 @@ export default function Footer() {
             <Image
               src="/cvs_logo.png" // Ensure the path to the logo is correct
               alt="Code Vibe Studios Logo"
-              height={40} // Adjust height as needed (set to 64px as per Figma design)
-              width={120} // Adjust width as needed (1,240px fixed width)
-              
+              height={40} // Adjust height as needed
+              width={120} // Adjust width as needed
             />
           </div>
 
@@ -26,6 +25,7 @@ export default function Footer() {
               id="email-input"
               placeholder="Enter your email"
               className="w-full sm:w-auto border border-gray-300 rounded-full px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 text-center"
+              aria-label="Email input"
             />
 
             <Link href="/contactUs">
@@ -47,13 +47,13 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="flex justify-center space-x-6">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
               <Image src="/brand-instagram.png" alt="Instagram logo" width={24} height={24} />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook">
               <Image src="/brand-facebook.png" alt="Facebook logo" width={24} height={24} />
             </a>
-            <a href="https://www.linkedin.com/company/code-vibe-studios/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/company/code-vibe-studios/" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn">
               <Image src="/brand-linkedin.png" alt="LinkedIn logo" width={24} height={24} />
             </a>
           </div>
