@@ -15,6 +15,9 @@ const ScrollProgressBar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Initial update on mount
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -22,8 +25,8 @@ const ScrollProgressBar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 h-4 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-500 ease-in-out z-50"
-      style={{ width: `${scrollWidth}%` }}
+      className="fixed top-0 left-0 h-4 bg-gradient-to-r from-purple-500 to-blue-500 transition-width duration-300 ease-in-out z-50"
+      style={{ width: `${scrollWidth}%`, transition: 'width 0.3s ease-in-out' }} // Adjust the duration and easing for smoothness
     ></div>
   );
 };
