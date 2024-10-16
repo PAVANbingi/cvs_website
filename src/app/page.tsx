@@ -1,10 +1,8 @@
 import Hero from './components/Hero';
-import Navbar from './components/Navbar';
 import Services from './components/Services';
 import Workflow from './components/Workflow';
 import AboutUs from './components/AboutUs';
-import Footer from './components/Footer';
-import ContactUs from './components/ContactUs';
+import ContactInfo from './components/ContactInfo';
 
 export default function Home() {
   return (
@@ -15,7 +13,7 @@ export default function Home() {
         <div className="pt-8"> {/* Padding top to prevent content overlap */}
           <Services />
           <Workflow />
-          <ContactUs/>
+          <ContactInfo/>
           <AboutUs />
          
         </div>

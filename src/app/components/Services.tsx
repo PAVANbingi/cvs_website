@@ -13,14 +13,14 @@ export default function Services() {
         style={{ maxWidth: "1240px" }}
       >
         {/* Row 1: Design */}
-        <div className="relative group col-span-1">
+        <div className="relative group col-span-1 overflow-hidden rounded-lg">
           <Image
             src="/design.png"
             alt="Design"
-            className="object-cover rounded-lg w-full h-auto"
-            layout="responsive" // Responsive layout
-            width={300} // Specify a width
-            height={200} // Specify a height
+            className="object-cover rounded-lg w-full h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-105"
+            layout="responsive"
+            width={300}
+            height={200}
           />
           {/* Hover effect and vertical label */}
           <div className="absolute top-0 right-0 h-full bg-blue-600 text-white text-center px-2 flex justify-center items-center">
@@ -38,11 +38,11 @@ export default function Services() {
         </div>
 
         {/* Row 1: Development */}
-        <div className="relative group col-span-1 sm:col-span-2">
+        <div className="relative group col-span-1 sm:col-span-2 overflow-hidden rounded-lg">
           <Image
             src="/development.png"
             alt="Development"
-            className="object-cover rounded-lg w-full h-auto"
+            className="object-cover rounded-lg w-full h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-105"
             layout="responsive"
             width={300}
             height={200}
@@ -62,11 +62,11 @@ export default function Services() {
         </div>
 
         {/* Row 2: Zero to Hero */}
-        <div className="relative group col-span-1 sm:col-span-2">
+        <div className="relative group col-span-1 sm:col-span-2 overflow-hidden rounded-lg">
           <Image
             src="/zero_to_Hero.png"
             alt="Zero to Hero"
-            className="object-cover rounded-lg w-full h-auto"
+            className="object-cover rounded-lg w-full h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-105"
             layout="responsive"
             width={300}
             height={200}
@@ -86,11 +86,11 @@ export default function Services() {
         </div>
 
         {/* Row 2: Enhance Specific Areas */}
-        <div className="relative group col-span-1">
+        <div className="relative group col-span-1 overflow-hidden rounded-lg">
           <Image
             src="/enhanced.png"
             alt="Enhance Specific Areas"
-            className="object-cover rounded-lg w-full h-auto"
+            className="object-cover rounded-lg w-full h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-105"
             layout="responsive"
             width={300}
             height={200}

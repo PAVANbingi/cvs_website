@@ -12,30 +12,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="my-4 mx-4 bg-white bg-opacity-20 backdrop-blur-lg fixed top-0 left-0 right-0 z-20 border-b border-gray-800 rounded-lg">
+    <nav className="my-4 mx-4 bg-white bg-opacity-10 backdrop-blur-lg fixed top-0 left-0 right-0 z-20 border-b border-gray-800 rounded-lg">
       <div className="max-w-[1240px] mx-auto flex justify-between items-center h-[64px] px-6"> 
-        <div className="flex items-center justify-center md:justify-start p-4 md:p-0">
+        <div className="flex items-center justify-center md:justify-start p-0 md:p-0">
           <Image
             src="/cvs_logo.png"
             alt="Code Vibe Studios Logo"
-            height={40}
-            width={120}
+            height={80}
+            width={170}
           />
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-10">
+        {/* <div className="hidden md:flex space-x-10">
           <Link href="/" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Home</Link>
           <Link href="/about" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">About us</Link>
           <Link href="/services_" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Services</Link>
           <Link href="/contactUs" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Contact us</Link>
-        </div>
+        </div> */}
+        <div className="hidden md:flex space-x-10">
+  <Link href="/" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Home</Link>
+  <Link href="/about" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">About us</Link>
+  <Link href="/services_" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Services</Link>
+  <Link href="/contactUs" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 text-lg font-medium transition duration-300 p-2 rounded-full">Contact us</Link>
+</div>
+
 
         {/* Book a Call Button */}
         <div>
           <Link href="/contactUs">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
-              Book a Call
+            Feel the Vibe
             </button>
           </Link>
         </div>

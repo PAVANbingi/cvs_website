@@ -56,20 +56,20 @@ const ServiceCardSmall: React.FC<ServiceCardProps> = ({ title, description, imgS
   );
 }
 
-export default function ContactUs() {
+export default function ContactInfo() {
   return (
     <section className="bg-[#030712] text-white py-16 px-4 md:px-20">
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-light italic mb-4">
-          <span className="font-semibold">Interested</span> in having a deal with us?
+        <h2 className="font-light italic mb-4">
+          <span className=" text-4xl font-semibold">Interested{"   "}</span><div className="text-2xl"> in having a deal with us?</div>
         </h2>
         <a
           href="#"
           className="inline-block bg-gradient-to-r from-purple-400 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg text-lg font-medium hover:opacity-90 transition"
           aria-label="Connect Now"
         >
-          Connect Now &rarr;
+          Catch the Vibe &rarr;
         </a>
       </div>
 

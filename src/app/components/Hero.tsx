@@ -23,7 +23,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          "Seamless design and development to bring your website to life effortlessly!"
+        &ldquo;Seamless design and development to bring your website to life effortlessly!&ldquo;
         </p>
 
         {/* Call to Action Button */}
