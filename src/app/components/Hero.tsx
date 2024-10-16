@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://raw.githubusercontent.com/PAVANbingi/cvs_website/refs/heads/main/public/hero_bg.jfif" // Ensure the path to the background image is correct
+          src="/hero_bg.png" // bg image
           alt="A visually striking background for the hero section" // More descriptive alt text
           fill // Use fill instead of layout="fill"
           style={{ objectFit: 'cover', filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
