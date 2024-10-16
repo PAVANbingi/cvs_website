@@ -21,8 +21,8 @@ const ServiceCardLarge: React.FC<ServiceCardProps> = ({ title, description, imgS
         <Image
           src={imgSrc}
           alt={title}
-          width={500} // Adjust width as per your image aspect ratio
-          height={250} // Adjust height as per your image aspect ratio
+          width={500} //  image aspect ratio
+          height={250} 
           className="w-full h-64 object-cover rounded-lg mb-6"
         />
         <h3 className="text-2xl font-semibold mb-2">{title}</h3>
@@ -45,8 +45,8 @@ const ServiceCardSmall: React.FC<ServiceCardProps> = ({ title, description, imgS
         <Image
           src={imgSrc}
           alt={title}
-          width={300} // Adjust width as per your image aspect ratio
-          height={150} // Adjust height as per your image aspect ratio
+          width={300} 
+          height={150} //  image aspect ratio
           className="w-full h-40 object-cover rounded-lg mb-4"
         />
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
