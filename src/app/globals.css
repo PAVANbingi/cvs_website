@@ -5,7 +5,7 @@
 
 /* mouse coursor effect dhee */
 
-@keyframes blink {
+/* @keyframes blink {
     0% {
       transform: scale(1);
       opacity: 1;
@@ -21,12 +21,12 @@
   }
   
   body {
-    cursor: none; /* Hide the default mouse pointer */
+    cursor: none;
   }
   
   .cursor {
-    animation: blink 1.2s infinite ease-in-out; /* Blinking effect */
+    animation: blink 1.2s infinite ease-in-out;
     z-index: 50;
-    box-shadow: 0 0 25px rgba(0, 0, 255, 0.9), 0 0 40px rgba(0, 0, 255, 1); /* Bright blue glow */
-  }
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.9), 0 0 40px rgba(0, 0, 255, 1); 
+  } */
   

@@ -37,10 +37,10 @@ export default function RootLayout({
       </head>
       <body className={`bg-[#030712] ${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Scroll Progress Bar */}
-        <ScrollProgressBar />
+        {/* <ScrollProgressBar /> */}
         
         {/* Custom Cursor */}
-        <CustomCursor />
+        {/* <CustomCursor /> */}
 
         <header>
           <Navbar /> {/* Navbar component */}
