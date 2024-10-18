@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from './components/Navbar'; // Correct Navbar import
 import Footer from './components/Footer'; // Correct Footer import
-import CustomCursor from './components/CustomCursor'; // Correct Custom Cursor import
-import ScrollProgressBar from './components/ScrollProgressBar'; // Correct Scroll Progress Bar import
+//import CustomCursor from './components/CustomCursor'; // Correct Custom Cursor import
+// import ScrollProgressBar from './components/ScrollProgressBar'; // Correct Scroll Progress Bar import
 
 // Font imports
 const geistSans = localFont({
