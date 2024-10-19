@@ -9,10 +9,11 @@ export default function App() {
     e.preventDefault();
     setStatus("loading"); // Set status to loading before form submission
 
-    const formEle = e.currentTarget; // Use the event to get the form element
+    const formEle = e.currentTarget;
     const formData = new FormData(formEle);
 
-    fetch("https://script.google.com/macros/s/AKfycbznuPPRN2k4RBx-CYUmKg2qjKE1Lr-lj1ycgYEEZJ_U0TK1Attt405UN5aSlINJkp3c/exec",
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzJH5EitiAI0KtdLSdX5-Qs3PFGj9DhI6ln56u0fawB4sg1ouEFbXSJsIFMznK7QFGt/exec",
       {
         method: "POST",
         body: formData,
@@ -20,10 +21,10 @@ export default function App() {
     )
       .then((res) => {
         if (res.ok) {
-          // If the response is successful (status 200-299)
           setStatus("success");
-          formEle.reset(); // Clear form fields after successful submission
-          return res.text(); // Return text in case it's not JSON
+          formEle.reset();
+          setTimeout(() => setStatus(""), 5000); // Auto-hide success message after 5 seconds
+          return res.text();
         } else {
           setStatus("error");
           throw new Error("Network response was not ok.");
@@ -34,63 +35,151 @@ export default function App() {
       })
       .catch((error) => {
         console.error("There was an error!", error);
-        setStatus("error"); // Handle the error case
+        setStatus("error");
       });
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-6">
-      <h1 className="text-3xl font-bold text-white mb-4">Contact Us</h1>
-      <h2 className="text-lg text-gray-300 mb-8">Testing......</h2>
-      <div className="w-full max-w-md">
-        <form
-          className="bg-gray-800 p-6 rounded-lg shadow-lg space-y-4"
-          onSubmit={Submit} // TSX way of handling form submission
-        >
-          <input
-            className="w-full p-3 rounded-md bg-gray-700 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Your Name"
-            name="Name"
-            type="text"
-            required
-          />
-          <input
-            className="w-full p-3 rounded-md bg-gray-700 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Your Email"
-            name="Email"
-            type="email"
-            required
-          />
-          <textarea
-            className="w-full p-3 rounded-md bg-gray-700 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Your Message"
-            name="Message"
-            rows={4}
-            required
-          ></textarea>
-          <button
-            className={`w-full bg-blue-600 text-white p-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300 ${
-              status === "loading" ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            type="submit"
-            disabled={status === "loading"} // Disable button while submitting
-          >
-            {status === "loading" ? "Submitting..." : "Submit"}
-          </button>
-        </form>
+    <div className="min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center my-16 p-6">
+    {/* Main container */}
+    <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-start">
+      {/* Left side: Title and form */}
+      <div className="space-y-8">
+        <h1 className="text-7xl font-bold">
+          It’s nice to <br />
+          meet you 
+          <span className="inline-block w-14 h-18   rounded-full py-1 ml-4 align-middle">
+            {/* Arrow icon */}
+            <img src="/logo.ico"/> 
+             
+          </span>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          Let’s Create Something Amazing Together! Vibe with Us at <b>Code Vibe Studios.</b>
+          For any general inquiries, simply fill out the form below, and we’ll get back to you in no time. 
+          Got a project in mind? Check out our Services, where we guide you step by step to bring your vision to life with care and attention to detail!
+        </p>
 
-        {/* Conditional rendering for success message */}
-        {status === "success" && (
-          <div className="mt-4 text-green-500 font-semibold">
-            Successfully submitted!
-          </div>
-        )}
+        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition">
+          Go to Services
+          <span className="inline-block ml-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
+        </button>
+        <p className="text-md text-gray-500">
+          Hate contact forms? Email us directly at{" "}
+          <a href="mailto:info@codevibestudios.com" className="text-blue-500">
+          info@codevibestudios.com
+          </a>
+        </p>
+      </div>
+        {/* Right side: Form */}
+        <div>
+          <form className="space-y-4" onSubmit={Submit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                className="w-full p-3 rounded-lg bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                placeholder="Name"
+                name="Name"
+                type="text"
+                required
+              />
+              <input
+                className="w-full p-3 rounded-lg bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                placeholder="Email Address"
+                name="Email"
+                type="email"
+                required
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                className="w-full p-3 rounded-lg bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                placeholder="Phone (Optional)"
+                name="Phone"
+                type="tel"
+              />
+              <select
+                className="w-full p-3 rounded-lg bg-gray-800 text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                name="How_did_you_hear_aboutUs"
+                required
+              >
+                <option value="">How did you hear about us?</option>
+                <option value="Google">Google</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+              </select>
+            </div>
+            <textarea
+              className="w-full p-3 rounded-lg bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="Tell us about your project"
+              name="ProjectDetails"
+              rows={4}
+              required
+            ></textarea>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                className="form-checkbox h-5 w-5 text-purple-500 rounded focus:ring-purple-500"
+                id="subscribe"
+                name="subscribe"
+              />
+              <label htmlFor="subscribe" className="ml-2 text-gray-400">
+                Subscribe to our newsletter for all the latest updates!
+              </label>
+            </div>
+            <button
+              className={`w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition duration-300 ${
+                status === "loading" ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              type="submit"
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Submitting..." : "Send Message"}
+              <span className="inline-block ml-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </span>
+            </button>
+          </form>
 
-        {status === "error" && (
-          <div className="mt-4 text-red-500 font-semibold">
-            Error submitting the form. Please try again.
-          </div>
-        )}
+          {/* Conditional rendering for success/error message */}
+          {status === "success" && (
+            <div className="mt-4 text-green-500 font-semibold text-center">
+              Successfully submitted! Our team will approach you shortly.
+            </div>
+          )}
+          {status === "error" && (
+            <div className="mt-4 text-red-500 font-semibold text-center">
+              Error submitting the form. Please try again.
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
