@@ -9,13 +9,16 @@ export default function Home() {
     <>
       <div className="bg-[#030712] text-white min-h-screen">
         <Hero />
-      
+
         <div className="pt-8"> {/* Padding top to prevent content overlap */}
           <Services />
           <Workflow />
-          <ContactInfo/>
-          <AboutUs />
-         
+          <ContactInfo />
+          
+          {/* Add an id for the About Us section */}
+          <section id="about">
+            <AboutUs />
+          </section>
         </div>
       </div>
     </>
