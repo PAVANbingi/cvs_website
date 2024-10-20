@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Image from 'next/image';
+
 
 export default function App() {
   const [status, setStatus] = useState<string>(""); // To handle submission status
@@ -40,19 +42,37 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center my-16 p-6">
-    {/* Main container */}
-    <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-start">
-      {/* Left side: Title and form */}
+    <div className="relative min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center my-16 ">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          src="/cvs2.mp4" // Path to your video file
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
+        />
+      </div>
+
+      {/* Main container */}
+      <div className="relative max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-start z-10">
+        {/* Left side: Title and form */}
       <div className="space-y-8">
         <h1 className="text-7xl font-bold">
           It’s nice to <br />
           meet you 
-          <span className="inline-block w-14 h-18   rounded-full py-1 ml-4 align-middle">
-            {/* Arrow icon */}
-            <img src="/logo.ico"/> 
-             
-          </span>
+          <span className="inline-block w-14 h-18 rounded-full py-1 ml-4 align-middle">
+  {/* Arrow icon */}
+  <Image 
+    src="/logo.ico" 
+    alt="Logo" // Provide an appropriate alt text
+    width={56} // Adjust width as needed
+    height={56} // Adjust height as needed
+  />
+</span>
+
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
           Let’s Create Something Amazing Together! Vibe with Us at <b>Code Vibe Studios.</b>

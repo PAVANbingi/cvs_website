@@ -42,7 +42,7 @@ const Navbar = () => {
         <div>
           <Link href="/vibeEnquiry">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
-            Vibe Your Journey
+            Start a Project
             </button>
           </Link>
         </div>
