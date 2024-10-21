@@ -8,21 +8,21 @@ export default function App() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="/vibe2.mp4" // Path to your video file
+          src="/vibe.mp4" // Path to your video file
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ filter: 'brightness(1)' }} // Adjust brightness for a subdued background
+          style={{ filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
         />
       </div>
 
       {/* Main Content */}
       <div className="z-10 text-center">
         <h1 className="text-7xl font-bold">
-          We are working on it <br />
-          Updated soon  
+        We're working on it! <br />
+        Updates will be available shortly  
           <span className="inline-block align-middle ml-4">
             {/* Arrow icon */}
             <Image 
