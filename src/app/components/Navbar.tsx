@@ -6,17 +6,10 @@ import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [routerPath, setRouterPath] = useState('');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  // Set the current path after the component mounts
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    setRouterPath(currentPath);
-  }, []);
 
   // Close the menu after 5 seconds if it's open
   useEffect(() => {
@@ -33,10 +26,6 @@ const Navbar = () => {
       console.log("Timer cleared.");
     };
   }, [isOpen]);
-
-  const isActiveLink = (path: string) => {
-    return routerPath === path ? 'bg-gradient-to-r from-purple-500 to-blue-600' : '';
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 py-4 px-6 bg-white/5 backdrop-blur-lg border-b border-gray-500/20 transition-all duration-500 hover:bg-white/10 hover:border-gray-300/30 shadow-lg">
@@ -56,16 +45,16 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-10">
-          <Link href="/" className={`text-white ${isActiveLink('/')} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300`}>
+          <Link href="/" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
             Home
           </Link>
-          <Link href="/about" className={`text-white ${isActiveLink('/about')} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300`}>
+          <Link href="/about" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
             About Us
           </Link>
-          <Link href="/services_" className={`text-white ${isActiveLink('/services_')} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300`}>
+          <Link href="/services_" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
             Services
           </Link>
-          <Link href="/contactUs" className={`text-white ${isActiveLink('/contactUs')} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300`}>
+          <Link href="/contactUs" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
             Contact Us
           </Link>
         </div>

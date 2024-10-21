@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from 'next/image';
+import Link from 'next/link'; 
 
 
 export default function App() {
@@ -79,7 +80,7 @@ export default function App() {
           For any general inquiries, simply fill out the form below, and we’ll get back to you in no time. 
           Got a project in mind? Check out our Services, where we guide you step by step to bring your vision to life with care and attention to detail!
         </p>
-
+        <Link href="/services_">
         <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition">
           Go to Services
           <span className="inline-block ml-2">
@@ -99,6 +100,7 @@ export default function App() {
             </svg>
           </span>
         </button>
+        </Link>
         <p className="text-md text-gray-500">
           Hate contact forms? Email us directly at{" "}
           <a href="mailto:info@codevibestudios.com" className="text-blue-500">
