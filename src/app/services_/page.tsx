@@ -21,7 +21,7 @@ export default function App() {
       {/* Main Content */}
       <div className="z-10 text-center">
         <h1 className="text-7xl font-bold">
-        We're working on it! <br />
+        We are working on it! <br />
         Updates will be available shortly  
           <span className="inline-block align-middle ml-4">
             {/* Arrow icon */}
