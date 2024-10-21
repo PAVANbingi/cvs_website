@@ -53,7 +53,7 @@ export default function App() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
+          style={{ filter: 'brightness(0.2)' }} // Adjust brightness for a subdued background
         />
       </div>
 

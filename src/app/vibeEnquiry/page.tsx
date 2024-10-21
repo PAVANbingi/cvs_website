@@ -128,13 +128,13 @@ const validateField = (name: string, value: string) => {
       <div className="absolute inset-0 z-0">
         {isMounted && (
           <video
-            src="/vibe.mp4" // Path to your video file
+            src="/cvs2.mp4" // Path to your video file
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
-            style={{ filter: 'brightness(0.5)' }} // Adjust brightness for a subdued background
+            style={{ filter: 'brightness(0.2)' }} // Adjust brightness for a subdued background
           />
         )}
       </div>
