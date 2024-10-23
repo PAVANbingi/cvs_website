@@ -66,7 +66,7 @@ export default function ContactInfo() {
         </h2>
         <a
           href="#"
-          className="inline-block bg-gradient-to-r from-purple-400 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg text-lg font-medium hover:opacity-90 transition"
+          className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105"
           aria-label="Connect Now"
         >
           Catch the Vibe &rarr;

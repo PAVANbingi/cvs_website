@@ -41,7 +41,7 @@ export default function Hero() {
         </p>
 
         {/* Call to Action Button */}
-        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-400 hover:to-blue-500">
+        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105">
           Explore Now
         </button>
       </div>

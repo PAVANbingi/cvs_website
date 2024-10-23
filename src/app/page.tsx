@@ -1,5 +1,5 @@
 import Hero from './components/Hero';
-import Services from './components/Services';
+import ServicesCVS from './components/ServicesCVS';
 import Workflow from './components/Workflow';
 import AboutUs from './components/AboutUs';
 import ContactInfo from './components/ContactInfo';
@@ -11,7 +11,7 @@ export default function Home() {
         <Hero />
 
         <div className="pt-8"> {/* Padding top to prevent content overlap */}
-          <Services />
+          <ServicesCVS />
           <Workflow />
           <ContactInfo />
           

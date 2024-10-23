@@ -123,7 +123,7 @@ const validateField = (name: string, value: string) => {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center py-16 px-6">
+    <div className="relative min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center mt-8 py-16 px-6">
       {/* Background Video - Render only if the component is mounted */}
       <div className="absolute inset-0 z-0">
         {isMounted && (

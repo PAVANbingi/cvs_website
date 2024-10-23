@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Services() {
+export default function ServicesCVS() {
   return (
     <div className="bg-[#030712] text-white mx-auto px-4 py-12 md:px-20">
       <h2 className="text-center text-3xl md:text-4xl font-semibold mb-12">

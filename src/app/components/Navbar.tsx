@@ -45,16 +45,16 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-10">
-          <Link href="/" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
+          <Link href="/" className="text-white text-lg font-medium  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 hover:scale-105 ">
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
+          <Link href="/about" className="text-white text-lg font-medium  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 hover:scale-105">
             About Us
           </Link>
-          <Link href="/services_" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
+          <Link href="/services" className="text-white text-lg font-medium  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 hover:scale-105">
             Services
           </Link>
-          <Link href="/contactUs" className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-purple-400 to-blue-500 text-lg font-medium transition duration-300">
+          <Link href="/contactUs" className="text-white text-lg font-medium  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 hover:scale-105">
             Contact Us
           </Link>
         </div>
@@ -62,8 +62,10 @@ const Navbar = () => {
         {/* Call to Action Button (Desktop Only) */}
         <div className="hidden md:flex">
           <Link href="/vibeEnquiry">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
-              Start a Project
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105">
+              
+               {/* hover:bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 rounded-lg text-white font-semibold text-lg transition-transform hover:scale-105 transition duration-300 */}
+               Begin Your Journey
             </button>
           </Link>
         </div>
@@ -90,23 +92,23 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-6 p-6 bg-gray-900 bg-opacity-90 backdrop-blur-md rounded-lg">
-          <Link href="/" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">
+          <Link href="/" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-lg">
             Home
           </Link>
-          <Link href="/about" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">
+          <Link href="/about" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-lg">
             About Us
           </Link>
-          <Link href="/services_" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">
+          <Link href="/services" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-lg">
             Services
           </Link>
-          <Link href="/contactUs" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-full">
+          <Link href="/contactUs" className="text-white hover:bg-gradient-to-r from-purple-400 to-blue-500 transition duration-300 p-2 rounded-lg">
             Contact Us
           </Link>
 
           {/* Call to Action Button (Mobile Menu) */}
           <Link href="/vibeEnquiry">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
-              Start a Project
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition duration-300 hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500">
+            Begin Your Journey
             </button>
           </Link>
         </div>

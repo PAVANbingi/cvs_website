@@ -43,7 +43,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center my-16 ">
+    <div className="relative min-h-screen bg-[#030712] text-white flex flex-col items-center justify-center my-20 ">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -81,7 +81,7 @@ export default function App() {
           Got a project in mind? Check out our Services, where we guide you step by step to bring your vision to life with care and attention to detail!
         </p>
         <Link href="/services_">
-        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition">
+        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105">
           Go to Services
           <span className="inline-block ml-2">
             <svg
@@ -164,7 +164,7 @@ export default function App() {
               </label>
             </div>
             <button
-              className={`w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition duration-300 ${
+              className={`w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105 ${
                 status === "loading" ? "opacity-50 cursor-not-allowed" : ""
               }`}
               type="submit"

@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Form */}
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full md:w-auto hover:scale:105">
             <label htmlFor="email-input" className="sr-only">Enter your email</label>
             <input 
               type="email"
@@ -29,7 +29,7 @@ export default function Footer() {
             />
 
             <Link href="/contactUs">
-              <button className="bg-gradient-to-r from-purple-400 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-600 transition duration-300 ease-in-out w-full sm:w-auto">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-700 transition hover:scale-105">
                 Get in Touch 
               </button>
             </Link>
@@ -40,8 +40,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-8">
           {/* Navigation Links */}
           <div className="flex justify-center md:justify-start flex-wrap space-x-8 text-lg text-white">
-             <Link href="/" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 ">Home</Link>
-            <Link href="/services_" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 ">Services</Link>
+             <Link href="/" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500  ">Home</Link>
+            <Link href="/services" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 ">Services</Link>
             <Link href="/about" className="text-white hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 ">About Us</Link>
           </div>
 
